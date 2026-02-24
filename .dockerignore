@@ -1,0 +1,24 @@
+# git
+.git
+.gitignore
+
+# deps
+node_modules
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# logs
+logs
+*.log
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# build/cache artifacts
+.cache
+.tmp
+dist
+build
+coverage

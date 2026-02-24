@@ -1,9 +1,11 @@
-FROM node:20
+FROM node:20-alpine
+
+# install git (needed for polling repo)
+RUN apk add --no-cache git
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
-
+# copy only what is needed for runtime (no build step)
 COPY . .
 
 EXPOSE 8080
